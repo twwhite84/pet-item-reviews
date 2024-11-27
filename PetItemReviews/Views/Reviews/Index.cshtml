@@ -1,0 +1,53 @@
+﻿@model List<PetItemReviews.Models.Item>
+@{
+    ViewData["Title"] = "Browse Reviews";
+}
+
+<h1>Reviews</h1>
+
+<form id="form-filter" asp-action="Index" method="get">
+    <div>
+        <label for="Name">Item Name</label>
+        <input name="Name" />
+    </div>
+
+    <div>
+        <label for="Category">Category</label>
+        <select name="Category">
+            <option value="">Select a category</option>
+            @foreach (Category c in ViewBag.Categories)
+            {
+                <option value="@c.CategoryId">@c.Name</option>
+            }
+        </select>
+    </div>
+    <div>
+        <button type="submit">Search</button>
+    </div>
+    <div>
+        <button asp-controller="Reviews" asp-action="Add">Add Review</button>
+    </div>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Average Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model.GroupBy(item => item.Name).Select(item => item.First()))
+            {
+                double? averageRating = (from entry in Model where entry.Name == item.Name select entry.Rating).Average();
+                <tr>
+                    <td>@item.Category.Name</td>
+                    <td>@item.Name</td>
+                    <td>@averageRating</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

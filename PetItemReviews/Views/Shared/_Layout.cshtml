@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div><a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a></div>
+            <div><a class="nav-link" asp-controller="Reviews" asp-action="Index">Browse</a></div>
+            <div><a class="nav-link" asp-controller="Reviews" asp-action="Add">Add</a></div>
+            <div><a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a></div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer>
+        <p>Email Webmaster: <a href="mailto:mrdog@petitemreviews.com">mrdog@petitemreviews.com</a></p>
+        <ul>
+            <li><a href="https://validator.w3.org/docs/users.html#Calling">W3C Validator API</a></li>
+            <li><a href="https://jigsaw.w3.org/css-validator/manual.html">CSS Validator</a></li>
+        </ul>
+    </footer>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

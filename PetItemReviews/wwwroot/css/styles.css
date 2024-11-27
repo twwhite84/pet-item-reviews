@@ -1,0 +1,95 @@
+﻿body {
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1rem;
+}
+
+.navbar {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    background-color: grey;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration:none;
+    font-size:larger;
+}
+
+footer {
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    text-align: center;
+    padding: 5px;
+}
+
+th {
+    background-color:darkcyan;
+    color: white;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:lightgreen;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+}
+
+form > * {
+    padding: 1rem;
+}
+
+.text-danger {
+    color: red;
+}
+
+span {
+    padding-left: 1rem;
+}
+
+#home-logo-header {
+    margin: auto;
+    width:fit-content;
+    text-align: center;
+}
+
+#home-below-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#home-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#home-buttons > a > button {
+    margin: 1rem;
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+a:hover {
+    color: orange;
+}

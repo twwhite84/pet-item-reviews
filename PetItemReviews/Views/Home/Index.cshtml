@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+}
+
+<main>
+    <div id="home-logo-header">
+        <img src="~/images/dog.jpg" width="500px"/>
+        <h1>Mr Dog's Pet Item Reviews</h1>
+    </div>
+    <div id="home-below-header">
+        <div id="home-blurb">
+            <p>Welcome to Mr Dog's Pet Item Reivews.</p>
+            <p>On this site you can search and contribute reviews of items for your dog.</p>
+        </div>
+        <div id="home-buttons">
+            <a asp-controller="Reviews" asp-action="Index"><button>Browse Reviews</button></a>
+            <a asp-controller="Reviews" asp-action="Add"><button>Add Review</button></a>
+            <a asp-controller="Home" asp-action="Contact"><button >Contact Webmaster</button></a>
+        </div>
+    </div>
+</main>
